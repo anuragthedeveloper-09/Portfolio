@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .user {
+            font-size: 26px;
+            font-family: poppins, sans-serif;
+            font-weight: 400;
+            font-weight: bold;
+            color: #6E06F2;
+        }
+
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 17px;
+            font-weight: 600;
+            font-family: poppins, sans-serif;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            color: #6E06F2;
+        }
+
+        .nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #000;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #6E06F2;
+        }
+
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .contact-subtext {
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: stretch;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* LEFT */
+        .contact-info {
+            flex: 1;
+            text-align: left;
+            background: #1a1a2e;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        /* RIGHT FORM */
+        .contact-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #1a1a2e;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            background: #0f0f1a;
+            color: white;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #a855f7;
+        }
+
+        /* BUTTON */
+        .contact-form button {
+            padding: 12px;
+            background: #a855f7;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #9333ea;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 100%;
+                background: #fff;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 20px 0;
+                border-radius: 10px;
+            }
+
+            .nav a {
+                padding: 12px;
+                font-size: 18px;
+            }
+
+            .nav.active {
+                display: flex;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #6E06F2;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="user">Portfolio</div>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <div class="nav" id="nav">
+                <a href="http://127.0.0.1:5500/index.html">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <section id="contact" class="contact">
+
+            <h2>Contact Me</h2>
+            <p class="contact-subtext">
+                Have a project in mind? Let’s work together 🚀
+            </p>
+
+            <div class="contact-container">
+
+                <!-- LEFT INFO -->
+                <div class="contact-info">
+                    <p><strong>Email:</strong> your@email.com</p>
+                    <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+                    <p><strong>Location:</strong> India</p>
+                </div>
+
+                <!-- RIGHT FORM -->
+                <form class="contact-form">
+
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+
+                    <button type="submit" id="message">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </section>
+        <script>
+            const messageBtn = document.getElementById('message');
+
+            messageBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                alert('Message sent successfully!');
+            });
+
+            const menuToggle = document.getElementById("menu-toggle");
+            const nav = document.getElementById("nav");
+
+            // Toggle menu
+            menuToggle.addEventListener("click", () => {
+                nav.classList.toggle("active");
+            });
+
+            // Close menu when clicking a link (mobile UX upgrade)
+            document.querySelectorAll(".nav a").forEach(link => {
+                link.addEventListener("click", () => {
+                    nav.classList.remove("active");
+                });
+            });
+
+            menuToggle.addEventListener("click", () => {
+                nav.classList.toggle("active");
+                menuToggle.classList.toggle("active");
+            });
+        </script>
+
+</body>
+
+</html>
